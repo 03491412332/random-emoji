@@ -15,11 +15,11 @@ jobs:
       - name: say hello
         run:  echo "Hi from github actions"
 
-      - name: Show some information
-        run: |
-          echo "Repository: ${{ github.repository] }}"
-          echo "Branch: ${{ github.ref_name}}"
-          echo "Commit: ${{github.sha}}"
-          echo "Started by: ${{ github.actor}}"
+      -  name: Show some information
+         run: |
+          echo "Repository: ${{ github.repository }}"
+          echo "Branch: ${{ github.ref_name }}"
+          echo "Commit: ${{ github.sha }}"
+          echo "Started by: ${{ github.actor }}"
           node --version
           ls -la
