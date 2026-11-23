@@ -7,7 +7,7 @@ on:
   workflow_call:
 
 permissions:
-  content: read
+  contents: read
 
 concurrency:
   group: ContinuousIntegration-${{ github.workflow }}-${{ github.ref }}
