@@ -9,7 +9,9 @@ import { AuthGuard } from './common/auth/auth.guard.js';
 import { BrowserInterceptor } from './common/browser/browser.interceptor.js';
 import { TransformResponseInterceptor } from './common/transform-response/transform-response.interceptor.js';
 import { AllExceptionsFilter } from './common/all-exceptions/all-exceptions.filter.js';
-
+import { AppConfigModule } from './config/app-config.module.js';
+import { DatabaseModule } from './database/database.module.js';
+import { HealthModule } from './health/health.module.js';
 
 export const { ObserveModule, ObserveInstrument } = createObserveModule();
 
@@ -22,6 +24,7 @@ export const { ObserveModule, ObserveInstrument } = createObserveModule();
       appSecret: 'YOUR_APP_SECRET',
       serviceId: 'random-emoji',
     }),
+   AppConfigModule,DatabaseModule,HealthModule
   ],
   controllers: [AppController],
 
